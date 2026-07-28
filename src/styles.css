@@ -382,6 +382,598 @@ img {
   color: var(--muted);
 }
 
+/* ---- BetterFlags branded figure ---- */
+.fig-brand {
+  padding: 0;
+  background: #0b1f3a;
+}
+
+.bf {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #eaf1ff;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.bf-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transform: scale(1.02);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+.bf:hover .bf-bg {
+  transform: scale(1.06);
+  opacity: 0.6;
+}
+
+.bf-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 22, 44, 0.5) 0%,
+    rgba(9, 22, 44, 0.82) 58%,
+    rgba(9, 22, 44, 0.96) 100%
+  );
+}
+
+.bf-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 11px;
+}
+
+.bf-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.bf-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.bf-url {
+  margin-left: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.02em;
+  color: rgba(234, 241, 255, 0.8);
+}
+
+.bf-live {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  color: rgba(234, 241, 255, 0.85);
+}
+
+.bf-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #35d07f;
+  animation: bfPulse 2s infinite;
+}
+
+@keyframes bfPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(53, 208, 127, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(53, 208, 127, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(53, 208, 127, 0);
+  }
+}
+
+.bf-body {
+  position: relative;
+  height: calc(100% - 45px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 13px;
+  padding: 22px clamp(20px, 4vw, 44px);
+  text-align: left;
+}
+
+.bf-brandname {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.4rem, 3.4vw, 2.1rem);
+  line-height: 1;
+}
+
+.bf-accent {
+  color: #7fb2ff;
+}
+
+.bf-tag {
+  margin: 0;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  line-height: 1.5;
+  max-width: 34ch;
+  color: rgba(234, 241, 255, 0.82);
+}
+
+.bf-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bf-chip {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(234, 241, 255, 0.9);
+}
+
+.bf-cta {
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 2px;
+  transition: gap 0.25s ease, border-color 0.25s ease;
+}
+
+.bf:hover .bf-cta {
+  gap: 11px;
+  border-color: #7fb2ff;
+}
+
+.bf-private {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: rgba(255, 74, 74, 0.16);
+  border: 1px solid rgba(255, 120, 120, 0.5);
+  color: #ffdada;
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 520px) {
+  .bf-tag {
+    display: none;
+  }
+  .bf-private {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.ic {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+/* ---- MHI ERP console figure ---- */
+.fig-erp {
+  padding: 0;
+  background: #0f172a;
+}
+
+.erp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #dce6f5;
+  overflow: hidden;
+}
+
+.erp-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+}
+
+.erp-title {
+  margin-left: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: rgba(220, 230, 245, 0.72);
+}
+
+.erp-tag {
+  margin-left: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  color: #8ab4ff;
+}
+
+.erp-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.erp-side {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 38%;
+  max-width: 200px;
+  padding: 14px 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.erp-nav {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: rgba(220, 230, 245, 0.62);
+}
+
+.erp-nav.is-active {
+  background: rgba(138, 180, 255, 0.14);
+  color: #d6e4ff;
+}
+
+.erp-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: clamp(16px, 3vw, 26px);
+}
+
+.erp-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 11px;
+}
+
+.erp-step {
+  padding: 4px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(220, 230, 245, 0.85);
+}
+
+.erp-step.is-ok {
+  color: #7ce6ac;
+  border-color: rgba(53, 208, 127, 0.5);
+  background: rgba(53, 208, 127, 0.12);
+}
+
+.erp-arrow {
+  color: rgba(220, 230, 245, 0.4);
+}
+
+.erp-fund {
+  margin-left: auto;
+  font-weight: 600;
+  color: #f5c451;
+}
+
+.erp-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 13px 15px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.erp-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.erp-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(138, 180, 255, 0.16);
+  border: 1px solid rgba(138, 180, 255, 0.4);
+  color: #bcd3ff;
+}
+
+.erp-alloc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+}
+
+.erp-alloc-label {
+  color: rgba(220, 230, 245, 0.7);
+  white-space: nowrap;
+}
+
+.erp-bar {
+  flex: 1;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.erp-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8ab4ff, #5eead4);
+}
+
+.erp-alloc-val {
+  font-weight: 600;
+  color: #d6e4ff;
+}
+
+/* ---- CRM (web & mobile) figure ---- */
+.fig-crm {
+  padding: 0;
+  background: radial-gradient(120% 120% at 15% 0%, #14343a 0%, #0b1f26 55%, #081419 100%);
+}
+
+.crm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 4vw, 40px);
+  width: 100%;
+  height: 100%;
+  padding: clamp(18px, 4vw, 40px);
+  color: #e4f6f1;
+  overflow: hidden;
+}
+
+.crm-glow {
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 55%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.22), transparent 68%);
+  pointer-events: none;
+}
+
+.crm-copy {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.crm-kicker {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5eead4;
+  margin-bottom: 16px;
+}
+
+.crm-feats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.crm-feat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+  font-weight: 600;
+  color: #eafaf6;
+}
+
+.crm-feat .ic {
+  width: 18px;
+  height: 18px;
+  color: #5eead4;
+}
+
+.crm-phone {
+  position: relative;
+  flex: none;
+  width: clamp(140px, 26vw, 190px);
+  aspect-ratio: 9 / 17;
+  border-radius: 22px;
+  padding: 8px;
+  background: linear-gradient(160deg, #1b3b42, #0c2329);
+  border: 1px solid rgba(94, 234, 212, 0.28);
+  box-shadow: 0 26px 50px -22px rgba(0, 0, 0, 0.7);
+}
+
+.crm-notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34%;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.crm-screen {
+  height: 100%;
+  border-radius: 15px;
+  background: #0a1c21;
+  padding: 18px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.crm-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.crm-hi {
+  font-size: 12px;
+  font-weight: 700;
+  color: #eafaf6;
+}
+
+.crm-avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #5eead4, #3b82f6);
+}
+
+.crm-kpis {
+  display: flex;
+  gap: 6px;
+}
+
+.crm-kpi {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 7px 6px;
+  border-radius: 8px;
+  background: rgba(94, 234, 212, 0.08);
+  border: 1px solid rgba(94, 234, 212, 0.16);
+  font-size: 8.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(228, 246, 241, 0.65);
+}
+
+.crm-kpi b {
+  font-size: 13px;
+  color: #eafaf6;
+}
+
+.crm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 2px;
+}
+
+.crm-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 9px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.crm-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.crm-dot.is-hot {
+  background: #f87171;
+}
+.crm-dot.is-warm {
+  background: #fbbf24;
+}
+.crm-dot.is-cool {
+  background: #5eead4;
+}
+
+.crm-line {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.crm-line.w1 {
+  width: 46%;
+}
+.crm-line.w2 {
+  width: 60%;
+}
+.crm-line.w3 {
+  width: 38%;
+}
+
+.crm-amt {
+  margin-left: auto;
+  font-size: 9px;
+  font-weight: 700;
+  color: #cdeee7;
+}
+
+@media (max-width: 560px) {
+  .erp-nav-label {
+    display: none;
+  }
+  .erp-side {
+    width: auto;
+    padding: 12px 8px;
+  }
+  .erp-nav {
+    justify-content: center;
+    padding: 7px;
+  }
+  .crm-copy {
+    display: none;
+  }
+  .crm {
+    justify-content: center;
+  }
+}
+
 /* ============ EXPERIENCE ============ */
 .exp-list {
   max-width: 680px;

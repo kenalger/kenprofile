@@ -15,7 +15,7 @@ export default function Contact() {
 
       <div className="reveal contact-meta" style={{ "--rd": "120ms" }}>
         <a
-          href="https://linkedin.com/in/ken-alger-dimaymay"
+          href="https://www.linkedin.com/in/ken-alger-dimaymay-671927307"
           target="_blank"
           rel="noopener"
           className="ul"
