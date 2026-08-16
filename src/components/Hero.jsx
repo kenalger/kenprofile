@@ -22,6 +22,13 @@ export default function Hero() {
         <a href="#work" className="btn-solid">
           View work →
         </a>
+        <a
+          href="/Ken-Alger-Dimaymay-CV.pdf"
+          download="Ken-Alger-Dimaymay-CV.pdf"
+          className="btn-outline"
+        >
+          Download CV ↓
+        </a>
         <a href="#contact" className="btn-text ul">
           Get in touch
         </a>

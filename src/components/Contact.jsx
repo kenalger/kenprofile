@@ -25,6 +25,13 @@ export default function Contact() {
         <a href="tel:+639212662965" className="ul">
           +63 921 266 2965
         </a>
+        <a
+          href="/Ken-Alger-Dimaymay-CV.pdf"
+          download="Ken-Alger-Dimaymay-CV.pdf"
+          className="ul"
+        >
+          Download CV ↓
+        </a>
         <span>Cebu City, PH</span>
         <span className="contact-status">
           <span className="dot" />

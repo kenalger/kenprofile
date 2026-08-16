@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
 import Work from "./components/Work.jsx";
+import Personal from "./components/Personal.jsx";
 import Experience from "./components/Experience.jsx";
 import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
@@ -30,6 +31,7 @@ export default function App() {
       <main>
         <Hero />
         <Work />
+        <Personal />
         <Experience />
         <Skills />
         <Contact />
