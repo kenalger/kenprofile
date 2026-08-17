@@ -43,6 +43,31 @@ const PROJECTS = [
     ],
     private: true,
   },
+  {
+    no: "04",
+    meta: "DTR · Face Recognition · Myvan Holdings Inc.",
+    name: "PayLalo",
+    desc: "A Daily Time Record app on iOS and Android that clocks employees in and out with face recognition — FaceSense AI verifies the person with 3D mapping and a liveness check before the punch is written, so the DTR that comes out of it (time-in, time-out, attendance photos) is one nobody else can punch for you.",
+    stack: "React Native · Face Recognition · ASP.NET Core",
+    kind: "dtr",
+    link: "https://paylalo.com",
+    domain: "paylalo.com",
+    chips: ["FaceSense AI · face recognition", "DTR · time-in / time-out"],
+    shots: [
+      {
+        src: "/projects/paylalo-1.jpg",
+        alt: "PayLalo home screen with clock in, attendance and today's activity",
+      },
+      {
+        src: "/projects/paylalo-2.jpg",
+        alt: "PayLalo FaceSense AI face recognition screen with liveness confirmed",
+      },
+      {
+        src: "/projects/paylalo-3.jpg",
+        alt: "PayLalo photo review screen showing clock-in and clock-out photos",
+      },
+    ],
+  },
 ];
 
 export default function Work() {
@@ -73,6 +98,7 @@ export default function Work() {
 function Figure({ p }) {
   if (p.kind === "erp") return <ERPFigure p={p} />;
   if (p.kind === "crm") return <CRMFigure p={p} />;
+  if (p.kind === "dtr") return <DTRFigure p={p} />;
   if (p.link) return <BrandFigure p={p} />;
   return (
     <div className="fig">
@@ -283,6 +309,54 @@ function CRMFigure({ p }) {
     </div>
   );
 }
+
+function DTRFigure({ p }) {
+  return (
+    <div className="fig fig-dtr">
+      <a
+        className="dtr"
+        href={p.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visit ${p.name} live site`}
+      >
+        <div className="dtr-top">
+          <span className="bf-dots">
+            <i />
+            <i />
+            <i />
+          </span>
+          <span className="dtr-url">{p.domain}</span>
+          <span className="bf-live">
+            <i className="bf-live-dot" /> live
+          </span>
+        </div>
+
+        <div className="dtr-shots">
+          {p.shots.map((s, i) => (
+            <div key={s.src} className={`dtr-phone${i === 1 ? " is-mid" : ""}`}>
+              <img src={s.src} alt={s.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+
+        <div className="dtr-foot">
+          <span className="dtr-chips">
+            {p.chips.map((c) => (
+              <span key={c} className="dtr-chip">
+                {c}
+              </span>
+            ))}
+          </span>
+          <span className="dtr-cta">
+            Visit live site <span aria-hidden="true">↗</span>
+          </span>
+        </div>
+      </a>
+    </div>
+  );
+}
+
 
 function BrandFigure({ p }) {
   return (

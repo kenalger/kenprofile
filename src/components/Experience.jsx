@@ -9,7 +9,7 @@ const ENTRIES = [
     date: "JAN 2025 — PRESENT",
     role: "Web / Software Developer",
     org: "Myvan Holdings Inc.",
-    desc: "Built ERP modules and CRM web/mobile apps — approval routing, fund tracking, quotation generation, manufacturing and real-estate reservation workflows. Also maintained SAP ERP Inventory Management (MRIS, Stock Transfer Slip), optimized Purchasing via LINQ and backend pagination, and improved Sales Order processing.",
+    desc: "Built PayLalo, a Daily Time Record app with face-recognition time-in/time-out and attendance logging. Also built ERP modules and CRM web/mobile apps — approval routing, fund tracking, quotation generation, manufacturing and real-estate reservation workflows — maintained SAP ERP Inventory Management (MRIS, Stock Transfer Slip), optimized Purchasing via LINQ and backend pagination, and improved Sales Order processing.",
   },
   {
     date: "GRADUATED DEC 2024",

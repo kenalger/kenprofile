@@ -1,14 +1,22 @@
 const GROUPS = [
   {
     cat: "Frontend",
-    items: "React · Next.js · Angular · React Native · TypeScript · NG-ZORRO",
+    years: "2 yrs",
+    items: "React · Next.js · Angular · TypeScript · NG-ZORRO",
+  },
+  {
+    cat: "Mobile",
+    years: "2 yrs",
+    items: "React Native · Expo · iOS & Android",
   },
   {
     cat: "Backend",
+    years: "2 yrs",
     items: "ASP.NET Core · C# · Node.js · LINQ · SQL · REST APIs",
   },
   {
     cat: "Systems & ERP",
+    years: "2 yrs",
     items:
       "SAP ERP · Inventory · Procurement · Sales Orders · Manufacturing · CRM",
   },
@@ -31,7 +39,10 @@ export default function Skills() {
             className="reveal"
             style={{ "--rd": `${i * 60}ms` }}
           >
-            <div className="skill-cat">{g.cat}</div>
+            <div className="skill-cat">
+              {g.cat}
+              {g.years && <span className="skill-years">{g.years}</span>}
+            </div>
             <div className="skill-items">{g.items}</div>
           </div>
         ))}
